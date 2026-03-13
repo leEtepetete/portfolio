@@ -71,11 +71,21 @@ li{
 }
 
 .project{
-  padding:18px 0;
+   padding:18px 0;
   border-top:1px solid var(--line);
+
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:20px;
+  align-items:start;
    transition:opacity 0.2s ease;
 }
 
+.project img{
+  width:75%;
+  border-radius:6px;
+  border:1px solid var(--line);
+}
 .project:hover{
   opacity:0.85;
 }
@@ -86,7 +96,6 @@ li{
 .project-preview{
   width:100%;
   border-radius:6px;
-  border:1px solid #e5e5e5;
   margin-bottom:14px;
 }
 
@@ -143,7 +152,7 @@ Background in microbiology and quality in the world of pharma.
 Currently following the Fullstack Developer Curriculum on freeCodeCamp.org.
 </p>
 
-<h2>Goal</h2>
+<h2>Goals</h2>
 <p>
 Javascript, Libraries, Python, Relational Dadabases, APIs
 </p>
@@ -169,25 +178,23 @@ Javascript, Libraries, Python, Relational Dadabases, APIs
   <img src="vivilio.png" alt="Vivilio app screenshot" class="project-preview">
 </div>
 
+<div class="project-content">
 <div class="project-title">
 Bilingual Childrens Book App
 </div>
 
 <p>
-Concept and prototype for a bilingual children's book application.
+Prototype for a bilingual children's book application.
 Currently used as a playground while building frontend skills.
 </p>
 
-<div class="project-tech">
-HTML · CSS · JavaScript
-</div>
+<p>
+Users can pick a book and customize each paragraph's language.
+They should be able to save it in a printable format.
+</p>
 
+<div class="project-tech">HTML · CSS · JavaScript</div>
 </div>
-
-<div class="project">
-<div class="project-title">freeCodeCamp Certification Projects</div>
-<div>Collection of responsive web design projects created during the certification.</div>
-<div class="project-tech">HTML · CSS</div>
 </div>
 
 </section>
@@ -207,6 +214,7 @@ HTML · CSS · JavaScript
 
 </body>
 </html>
+
 
 
 
