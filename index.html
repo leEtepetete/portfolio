@@ -1,239 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark"> 
-<title>Leonie Vogt – Portfolio</title>
-<style>
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+  
+      <section class="card about">
+        <h2>Leonie Vogt</h2>
+        <h3><i class="fa-solid fa-dna"></i> M.Sc. Molecular Biology</h3>
+        <h3><i class="fa-solid fa-flask"></i> QA Biotechnology</h3>
+        <p>
+          In my work I ensure dataintegrity in a highly regulated industry, in
+          my freetime I learn how to code and create content for my project.
+        </p>
+        <div class="contacts">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      
+       
+      </section>
 
-:root{
-  --text:#1a1a1a;
-  --subtle:#6b6b6b;
-  --line:#e5e5e5;
-  --accent:#2f6fed;
-  --bg:#ffffff;
-}
+      <section class="card projects">
+        <h2>Projects</h2>
+      </section>
 
-*{
-  box-sizing:border-box;
-}
+      <section class="card progress">
+        <h2>Progress <a href="#"></a><i class="fa-solid fa-graduation-cap"></i></a></h2>
 
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  margin:0;
-  line-height:1.6;
-}
+        <div class="progress-item">
+          <div class="label">
+            <span>HTML</span>
+            <span class="percent"></span>
+          </div>
+          <div class="bar" data-completed="276" data-total="302"></div>
+        </div>
 
-.container{
-  max-width:760px;
-  margin:0 auto;
-  padding:48px 24px;
-}
+        <div class="progress-item">
+          <div class="label">
+            <span>CSS</span>
+            <span class="percent"></span>
+          </div>
+          <div class="bar" data-completed="1078" data-total="1234"></div>
+        </div>
 
-header{
-  margin-bottom:48px;
-}
+        <div class="progress-item">
+          <div class="label">
+            <span>JavaScript</span>
+            <span class="percent"></span>
+          </div>
+          <div class="bar" data-completed="334" data-total="1310"></div>
+        </div>
 
-h1{
-  font-size:34px;
-  margin:0 0 8px 0;
-}
+        <div class="progress-item">
+          <div class="label">
+            <span>Node.js</span>
+            <span class="percent"></span>
+          </div>
+          <div class="bar" data-completed="0" data-total="100"></div>
+        </div>
+      </section>
 
-.tagline{
-  color:var(--subtle);
-  font-size:16px;
-}
-
-section{
-  margin-bottom:48px;
-}
-
-h2{
-  font-size:20px;
-  margin-bottom:16px;
-}
-
-p{
-  margin:0 0 16px 0;
-  max-width:65ch;
-}
-
-ul{
-  padding-left:18px;
-  margin:0;
-}
-
-li{
-  margin-bottom:6px;
-}
-
-.project{
-   padding:18px 0;
-  border-top:1px solid var(--line);
-
-  display:grid;
-  grid-template-columns:1fr 1.5fr;
-  gap:20px;
-  align-items:start;
-   transition:opacity 0.2s ease;
-}
-
-.project img{
-  width:100%;
-  border-radius:6px;
-  border:1px solid var(--line);
-}
-.project:hover{
-  opacity:0.85;
-}
-.project:first-child{
-  border-top:none;
-}
-
-.project-preview{
-  width:100%;
-  border-radius:6px;
-  margin-bottom:14px;
-}
-
-.project-title{
-  font-weight:600;
-  margin-bottom:4px;
-}
-
-.project-tech{
-  color:var(--subtle);
-  font-size:14px;
-}
-
-footer{
-  border-top:1px solid var(--line);
-  padding-top:24px;
-  color:var(--subtle);
-  font-size:14px;
-}
-
-a{
-  color:var(--accent);
-  text-decoration:none;
-}
-
-a:hover{
-  text-decoration:underline;
-}
-
-@media (prefers-color-scheme: dark){
-  :root{
-    --text:#e8e8e8;
-    --subtle:#a0a0a0;
-    --line:#2a2a2a;
-    --accent:#7aa2ff;
-    --bg:#121212;
-  }
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<header>
-<h1>Leonie Vogt</h1>
-<p class="tagline">Biology M.Sc. | QA Manager | Studying Frontend Development</p>
-</header>
-
-<section>
-<h2>About</h2>
-<p>
-M.Sc. in Molecular Microbiology with professional experience in Quality Assurance, GMP, Clinical Diagnostics and Scientific/Medical Writing. 
-</p>
-
-<p>
-In my current role as Quality Assurance Manager at a pharmaceutical CDMO I ensure that complex data and GMP-Documentation is compliant with regulations, understandable for all audiences and 100%-data driven - to meet the expectations of high profile clients and regulatory authorities both national and international. 
-</p>
-
-<p>
-Alongside my scientific background, I pursue web development projects with a focus on user-centered design in my personal time. I am well versed in Responsive Web Design and currently expanding my skills in JavaScript.
-</p>
-
-
-<h2>Personal Goals</h2>
-<p>
-Becoming a GMP-SME, mastering Javascript, JS Libraries, Python, Relational Databases and APIs.
-</p>
-</section>
-
-<section>
-<h2>Skills</h2>
-<ul>
-<li>GMP Regulations (ICH-Q7 - 11)</li>
-<li>CTD Quality Module 3</li>
-<li>Scientific Writing</li>
-<li>Medical Writing</li>
-<li>Clinical Diagnostics</li>
-<li>Molecular Biology</li>
-<li>Responsive Web Design (HTML/CSS)</li>
-</ul>
-</section>
-
-<section>
-<h2>Projects</h2>
-
-<div class="project">
-
-<div class="project-preview">
-  <a href="https://leetepetete.github.io/bilingual-book-app/"><img src="vivilio.png" alt="Vivilio app screenshot" class="project-preview"></a>
-</div>
-
-<div class="project-content">
-<div class="project-title">
-Bilingual Childrens Book App
-</div>
-
-<p>
-Draft for a bilingual children's book application.
-Currently used as a playground while building skills and collecting more stories/material.
-</p>
-
-<p>
- Pick a book and customize each paragraph's language.
-Save it in a printable format.
-</p>
-
-<p>
-As bilingual parents, we are raising our daughter in a multilingual environment. She has always loved books, and from an early age we shared stories in both of our native languages. When she started kindergarten in a diverse group of kids. They all shared this curiosity for kid's books and it is amazing to me how naturally children learn languages. For us as parents it's also alot of fun to explore languages together at a “baby level” - and surprisingly effective for our own learning in a totally unexpected way! This experience kicked off my ambition to learn web development, with the goal to give other parents access to language learning and simply having fun.
-</p>
-
-<div class="project-tech">HTML · CSS · JavaScript</div>
-</div>
-</div>
-
-</section>
-
-<section>
-<h2>Contact</h2>
-<p><a href="https://www.linkedin.com/in/leonie-vogt-b682aa263/" target="_blank">
-LinkedIn
-</a></p>
-<p><a href="https://www.freecodecamp.org/leonievogt" target="_blank">
-You can check out my Software Dev Progress here on freeCodeCamp.
-</a></p>
-</section>
-
-<footer>
-<p>© Leonie Vogt</p>
-</footer>
-
-</div>
-
-</body>
+      <section class="card resume">
+        <h2>Resume <i class="fas fa-save"></i></h2>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-
-
-
-

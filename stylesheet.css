@@ -1,0 +1,163 @@
+:root {
+  --bg: #0f172a;
+  --card: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --progress: #38bdf8;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top right, #1e3a8a33, transparent), var(--bg);
+  color: var(--text);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(56, 189, 248, 0.08),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+/* Cards */
+.card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+/* Typography */
+h2 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-weight: 200;
+}
+p {
+  font-weight: 200;
+}
+
+.fa-solid,
+.fas {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: var(--muted);
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.fa-dna {
+  color: magenta;
+}
+
+.fa-flask {
+  color: cyan;
+}
+
+.card:hover .icon {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contacts a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 2rem;
+  border-bottom: 1px solid transparent;
+}
+
+.contacts a:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+.fa-graduation-cap:hover,
+.fas:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.progress-item {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 0.5rem;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  margin-bottom: -4px;
+}
+
+.percent {
+}
+
+.bar {
+  --progress: 0%;
+  height: 8px;
+  /*width: 80%;*/
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent) var(--progress),
+    rgba(255, 255, 255, 0.05) var(--progress),
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+@media (min-width: 850px) {
+  .container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "about projects"
+      "progress resume";
+  }
+
+  .about {
+    grid-area: about;
+  }
+  .projects {
+    grid-area: projects;
+  }
+  .progress {
+    grid-area: progress;
+  }
+  .resume {
+    grid-area: resume;
+  }
+}
